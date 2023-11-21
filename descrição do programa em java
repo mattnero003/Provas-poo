@@ -1,0 +1,59 @@
+Claro, vou explicar o programa passo a passo. O programa é uma agenda simples em Java que permite ao usuário cadastrar contatos, buscar contatos pelo nome e imprimir a lista de contatos. Vou explicar as partes principais do código.
+
+### Classes:
+
+1. **Pessoa:**
+   - A classe `Pessoa` representa uma pessoa e tem um atributo `nome`.
+   - Possui um construtor que recebe o nome da pessoa e um método `getNome` para recuperar o nome.
+
+2. **Cidade:**
+   - A classe `Cidade` representa uma cidade e possui um atributo `nomeCidade`.
+   - Possui um construtor que recebe o nome da cidade e um método `getNomeCidade` para recuperar o nome.
+
+3. **Estado:**
+   - A classe `Estado` representa um estado e possui um atributo `nomeEstado`.
+   - Possui um construtor que recebe o nome do estado e um método `getNomeEstado` para recuperar o nome.
+
+4. **Endereco:**
+   - A classe `Endereco` representa o endereço de uma pessoa e tem atributos `ruaNumero`, `cidade` (do tipo `Cidade`), e `estado` (do tipo `Estado`).
+   - Possui um construtor que recebe rua/número, cidade e estado, e métodos `getRuaNumero`, `getCidade`, e `getEstado` para recuperar essas informações.
+
+5. **Contato:**
+   - A classe `Contato` representa um contato e tem atributos `pessoa` (do tipo `Pessoa`), `telefone` e `endereco` (do tipo `Endereco`).
+   - Possui um construtor que recebe uma pessoa, telefone e endereço, e métodos `getNome`, `getTelefone`, e `getEndereco` para recuperar essas informações.
+
+6. **Agenda:**
+   - A classe `Agenda` é a classe principal que contém o método `main`.
+   - Mantém um `ArrayList` de objetos `Contato` para armazenar os contatos.
+   - Contém métodos para exibir um menu, cadastrar contatos, buscar contatos e imprimir a agenda.
+
+### Métodos da Classe Agenda:
+
+1. **`main` Method:**
+   - Cria uma instância da classe `Agenda` e chama o método `exibirMenu`.
+
+2. **`exibirMenu` Method:**
+   - Exibe um menu com quatro opções: cadastrar contato, buscar contato, imprimir agenda e sair.
+   - Usa um loop para manter o programa em execução até que o usuário escolha a opção de sair.
+   - Chama métodos correspondentes com base na opção escolhida pelo usuário.
+
+3. **`cadastrarContato` Method:**
+   - Solicita ao usuário informações como nome da pessoa, telefone, rua/número, cidade e estado.
+   - Cria instâncias das classes `Pessoa`, `Cidade`, `Estado` e `Endereco` com as informações fornecidas.
+   - Cria uma instância da classe `Contato` com essas informações e a adiciona ao `ArrayList` de contatos.
+
+4. **`buscarContato` Method:**
+   - Solicita ao usuário o nome do contato a ser buscado.
+   - Percorre o `ArrayList` de contatos e exibe as informações se o contato for encontrado.
+
+5. **`imprimirAgenda` Method:**
+   - Exibe na tela as informações de todos os contatos presentes no `ArrayList`.
+
+### Fluxo Geral do Programa:
+
+- O programa começa exibindo um menu.
+- O usuário escolhe uma opção.
+- Com base na escolha, o programa realiza a ação correspondente.
+- O programa continua em execução até que o usuário escolha a opção para sair.
+
+Esse é um programa básico de agenda que permite a manipulação de contatos com informações detalhadas. Cada classe representa uma entidade no sistema, e o código é organizado de forma a seguir os princípios de programação orientada a objetos.
